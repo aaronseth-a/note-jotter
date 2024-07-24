@@ -86,18 +86,20 @@ const handleNoteSave = () => {
 };
 
 // Delete the clicked note
-const handleNoteDelete = (e) => {
+const handleNoteDelete = async (e) => {
   // Prevents the click listener for the list from being called when the button inside of it is clicked
   e.stopPropagation();
 
   const note = e.target;
   const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
 
+  console.log(noteId);
+
   if (activeNote.id === noteId) {
     activeNote = {};
   }
 
-  deleteNote(noteId).then(() => {
+  await deleteNote(noteId).then(() => {
     getAndRenderNotes();
     renderActiveNote();
   });
@@ -167,9 +169,10 @@ const renderNoteList = async (notes) => {
     return liEl;
   };
 
-  if (jsonNotes.length === 0) {
+  console.log(jsonNotes.length);
+  if (jsonNotes.length === 0 || jsonNotes.every(item => JSON.stringify(item) === '{}')) {
     noteListItems.push(createLi('No saved Notes', false));
-  }
+  }else{
 
   jsonNotes.forEach((note) => {
     const li = createLi(note.title);
@@ -177,7 +180,7 @@ const renderNoteList = async (notes) => {
 
     noteListItems.push(li);
   });
-
+  }
   if (window.location.pathname === '/notes') {
     noteListItems.forEach((note) => noteList[0].append(note));
   }
