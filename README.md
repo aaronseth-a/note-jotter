@@ -27,4 +27,4 @@ Copyright <YEAR> <COPYRIGHT HOLDER> Permission is hereby granted, free of charge
 <strong>Email:</strong> aaronseth.allen@gmail.com 
 
 ## TESTS
-The one error I've found is that to make new files the entire results directory must be completely removed.
+Maybe input weird things into the field? I'm not really sure.
