@@ -14,7 +14,7 @@
 I wanted to make a working tool for making simple notes that would help keep track of ideas. While making it I had to learn about reading from a file in a way that allowed for data to be moved around while following CRUD models. I don't think it stands out in any specific way except that not only can you make notes with it. It can also delete them.
 
 ## INSTALLATION
-The application does not need installing. It can be used at the following link: <a href="https://aaronseth-a.github.io/note-jotter/">https://aaronseth-a.github.io/note-jotter/</a>
+The application does not need installing. It can be used at the following link: [https://aaronseth-a.github.io/note-jotter/](https://note-jotter-50f402900ae7.herokuapp.com)
 
 ## USAGE
 You can enter a note title and description and save it. All saved notes will appear in a list to the left. If you click on a saved note it can be read. All notes can be cleared by deleting them individually.
